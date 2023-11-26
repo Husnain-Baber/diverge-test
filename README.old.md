@@ -1,0 +1,2 @@
+# diverge-test
+ An assignment
