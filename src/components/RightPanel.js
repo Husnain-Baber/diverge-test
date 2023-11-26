@@ -8,7 +8,10 @@ function RightPanel() {
                 <button className="btn tab-btn">English</button>
                 <button className="btn tab-btn">Arabic</button>
             </div>
-            <Speaker />
+            <ul>
+                <Speaker />
+                <Speaker />
+            </ul>
         </>
     )
 }
