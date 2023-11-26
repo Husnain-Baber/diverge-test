@@ -30,7 +30,6 @@
 }
 .left-panel {
     width: 289px;
-    padding: 15px;
 }
 .right-panel {
     width: 394px;
@@ -38,7 +37,9 @@
 .left-panel,
 .right-panel {
     min-height: calc(100vh - 100px);
+    padding: 15px;
 }
+.right-panel ul,
 .left-panel ul {
     list-style: none;
     margin-left: 0;
@@ -65,10 +66,28 @@
     background-color: #FFF;
     border-radius: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+    border-color: #FFF;
 }
 .title {
     margin-bottom: 4px;
 }
 .title, .time {
     font-size: 12px;
+}
+.left-panel ul li:hover,
+.left-panel ul li:focus {
+    border: 1px solid #F2870D;
+}
+.tab-btn{
+    border: 1px solid #CDCDCD;
+    border-radius: 10px;
+    background-color: #ffffff90;
+    color: #A1A1A1;
+    flex-grow: 1;
+}
+.tab-btn.active{
+    border-color: #F2870D;
+    color: #F2870D;
 }

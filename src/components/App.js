@@ -1,7 +1,8 @@
 import '../App.css';
 import Header from './Header';
-import Search from './Search';
-import VideoList from './VideoList';
+import LeftPanel from './LeftPanel';
+import RightPanel from './RightPanel';
+
 
 function App() {
   return (
@@ -9,19 +10,13 @@ function App() {
     <Header />
     <div className='content-wrapper d-flex'>
       <div className='left-panel bg-gray'>
-        <Search />
-        <ul>
-          <VideoList />
-          <VideoList />
-          <VideoList />
-          <VideoList />
-        </ul>
+        <LeftPanel />
       </div>
       <div className='main-content'>
 
       </div>
       <div className='right-panel bg-gray'>
-
+        <RightPanel />
       </div>
     </div>
     </>
