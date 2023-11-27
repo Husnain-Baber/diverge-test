@@ -6,12 +6,7 @@ function LeftPanel() {
     return (
         <>
             <Search />
-            <ul>
-                <VideoList />
-                <VideoList />
-                <VideoList />
-                <VideoList />
-            </ul>
+            <VideoList />
         </>
     )
 }

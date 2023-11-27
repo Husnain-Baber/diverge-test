@@ -10,7 +10,6 @@ function RightPanel() {
             </div>
             <ul>
                 <Speaker />
-                <Speaker />
             </ul>
         </>
     )

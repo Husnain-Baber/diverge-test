@@ -2,6 +2,23 @@
     height: 100px;
     box-shadow: 0 1px 3px -2px;
 }
+label{
+    font-weight: 500;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+    ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(145, 145, 145); 
+    border-radius: 5px;
+  }
+    ::-webkit-scrollbar-thumb:hover {
+    background: #525252; 
+  }
 .logo img {
     margin-left: 12px;
     width: 203px;
@@ -15,6 +32,18 @@
 .bg-gray {
     background-color: #F8F8F8;
 }
+.bg-dark-gray {
+    background-color: #B9B9B9;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
 .btn-activated,
 .btn-upload {
     width: 165px;
@@ -23,21 +52,65 @@
     font-weight: 500;
 
 }
+.btn-process {
+    width: 117px;
+    height: 38px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.button-minus,
+.button-plus {
+    padding: 0;
+    height: 16px;
+    line-height: 16px;
+    width: 16px
+}
+.button-plus {
+    color: #F2870D;
+    background-color: rgb(209 52 0 / 10%);
+}
+.accordion-button {
+    border-radius: 10px;
+    color: #555555;
+    box-shadow: none !important;
+}
+#accordionSummary .accordion-button {
+    color: #F2870D;
+    background-color: transparent;
+}
+#accordionSummary {
+    border: none;
+    background-color: rgb(209 52 0 / 10%);
+    border-radius: 10px;
+}
+#accordionSummary .accordion-item {
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+
+}
+#accordionSummary .accordion-body {
+    background-color: transparent;
+}
+.accordion-body {
+    padding-top: 0;
+}
 .btn-activated span,
 .btn-upload span,
 .main-content {
     flex-grow: 1;
 }
 .left-panel {
-    width: 289px;
+    min-width: 289px;
 }
 .right-panel {
-    width: 394px;
+    min-width: 394px;
 }
 .left-panel,
 .right-panel {
     min-height: calc(100vh - 100px);
     padding: 15px;
+    overflow-y: auto;
 }
 .right-panel ul,
 .left-panel ul {
@@ -68,7 +141,7 @@
     margin-bottom: 10px;
     cursor: pointer;
     transition: .5s ease;
-    border-color: #FFF;
+    border: 1px solid #FFF;
 }
 .right-panel ul li{
     height: 93px;
@@ -107,9 +180,11 @@
 }
 .title, .time {
     font-size: 12px;
+    font-weight: 500;
 }
 .right-panel .time {
     font-size: 15px;
+    color: #555555;
 }
 .left-panel ul li:hover,
 .left-panel ul li:focus {
@@ -125,4 +200,141 @@
 .tab-btn.active{
     border-color: #F2870D;
     color: #F2870D;
+}
+.main-content {
+    padding: 5px;
+}
+.accordion-item {
+    border: 1px solid #F2870D;
+    border-radius: 10px !important;
+}
+.accordion-button {
+    font-weight: 700;
+    border-radius: 10px !important;
+}
+.accordion-button::after {
+    background-image: url(./img/chevron-left.png);
+}
+.accordion-button:not(.collapsed) {
+    background-color: #FFF;
+    color: #555555;
+}
+.accordion-button.collapsed .btn-process {
+position: absolute;
+top: 0;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url(./img/chevron-down.png);
+    transform: none;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-item:first-of-type .accordion-button {
+    border-radius: 10px;
+}
+.custom-select {
+    width: 106px;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #F2870D;
+    color: #F2870D;
+    margin-left: 25px;
+}
+.input-group {
+    border: 1px solid #F2870D;
+    width: 106px;
+    height: 30px;
+    display: inline-block;
+    padding: 0 7px;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+.quantity-field{
+    width: 58px;
+    text-align: center;
+    color: #F2870D;
+    font-weight: 500;
+}
+.input-group input {
+    border: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.input-group input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.form-check {
+    display: inline-block;
+}
+.form-check-input[type=checkbox] {
+    border: 1px solid #F2870D !important;
+    box-shadow: none;
+}
+
+.form-check-input:checked{
+    background-color: #F2870D;
+}
+.video-wrapper video {
+    border-radius: 10px;
+}
+.left-part,
+.right-part {
+    flex-basis: 50%;
+}
+.left-part p,
+.right-part p {
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.left-part div p:first-child {
+    width: 130px;
+}
+.right-part div p:first-child {
+    width: 70px;
+}
+.left-part div p:last-child,
+.right-part div p:last-child {
+    font-weight: bold;
+    color: #F2870D
+}
+.dropdown-toggle::after{
+    content: none;
+}
+.btn-check:focus+.btn, .btn:focus {
+    box-shadow: none;
+}
+.dropdown-menu {
+    width: 224px;
+    height: 136px;
+    border-radius: 8px;
+}
+.dropdown-menu li {
+    margin-bottom: 0 !important;
+}
+.dropdown-menu a {
+    color: #F2870D;
+}
+.dropdown-menu li:hover {
+    border: none !important;
+    background-color: transparent !important;
+}
+.new-position{
+    position: absolute;
+    top: 0;
+}
+@media (max-width: 1400px) {
+    .right-panel {
+        min-width: 350px;
+    }
 }
